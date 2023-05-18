@@ -1,0 +1,199 @@
+.header{
+    width: min(80rem, 100%);
+    margin-inline: auto;
+    padding: 1rem;
+    position: relative;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-family: 'Epilogue';
+}
+
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    
+
+}
+
+.nav-mobile{
+    position: absolute;
+    padding: 1rem 2rem  ;
+    background-color: #fff;
+    width: 60%;
+    right: 0;
+    top: 0;
+    bottom: -100vh;
+    height: 100vh;
+
+    box-shadow: -400px 0px 0px 0px rgba(0,0,0,0.75);
+}
+.hamburgur{
+    cursor: pointer;
+}
+.close{
+    text-align: right;
+}
+.close img{
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.links > div{
+    padding: 2rem 0 0 0;
+}
+.links .opt-toggle{
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.buttons-mobile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    
+}
+
+.buttons-mobile .login-btn,
+.buttons-mobile .reg-btn{
+    border: none;
+    font-family: 'Epilogue';
+    color: hsl(0, 0%, 41%);
+    background-color: #fff;
+    padding: .8rem 0;
+    border-radius: 14px;
+    cursor: pointer;
+
+}
+
+.buttons-mobile .reg-btn{
+    outline: 2px solid hsl(0, 0%, 41%);
+}
+
+.options{
+    list-style: none;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.options li{
+    display: flex;
+    cursor: pointer;
+    gap: 1.5rem;
+}
+.links p:hover,
+.links a:hover{
+    color: #000;
+}
+.buttons-mobile .login-btn:hover{
+    color: #000;
+}
+.buttons-mobile .reg-btn:hover{
+    color: #000;
+    outline: 2px solid #000;
+}
+
+
+.buttons{
+    display: none;
+}
+.nav{
+    display: none;
+}
+
+
+@media(min-width: 720px){
+    .nav-mobile{
+        display: none;
+    }
+    .hamburgur{
+        display: none;
+    }
+
+    .buttons{
+        display: flex;
+        gap: 1rem;
+    }
+    .buttons .login-btn,
+    .buttons .reg-btn{
+        font-family: 'Epilogue';
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: .6rem 1.6rem;
+        background-color: #fff;
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+    }
+
+    .buttons .login-btn:is(:hover),
+    .nav p:is(:hover),
+    .nav a:is(:hover){
+        color: #000;
+    }
+    .buttons .reg-btn:is(:hover){
+        color: #000;
+        outline:2px solid #000 ;
+    }
+    .buttons .reg-btn{
+        outline: 2px solid hsl(0, 0%, 41%);
+        border-radius: 8px;
+    }
+
+    .nav{
+        display: flex;
+        gap: 1rem;
+        position: relative;
+
+    }
+    .nav p{
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+
+    }
+
+    .header-left{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .options{
+        padding: 1rem;
+        background-color: #fff;
+        position: absolute;
+        left: -4.5rem;
+        top: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 6px;
+        gap: 1rem;
+    }
+    .options li{
+        gap: .6rem;
+    }
+
+    .company{
+        left: 6rem;
+    }
+
+}
+
+@media(min-width: 990px){
+    .header-left{
+        gap: 4rem;
+    }
+    .nav{
+        gap: 2.5rem;
+    }
+}
